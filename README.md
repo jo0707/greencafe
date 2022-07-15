@@ -11,9 +11,10 @@
 <h2>Description</h2>
 <p>GreenCafe is a desktop-based cafe cashier application. Manage transactions, reports, menus and users with this app.</p>
 
-<h2> Requirements </h2>
+<h2> Built With </h2>
 
-* Java 11 or newer
+* JavaFX 11
+* Kotlin
   
 ## License
 The software is provided under the MIT License
