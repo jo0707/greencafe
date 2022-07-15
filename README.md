@@ -14,18 +14,11 @@
 <h2> Requirements </h2>
 
 * Java 11 or newer
-
-<h2> Getting Started </h2>
-
-* Download zip or clone this repo
-  > git clone https://github.com/jo0707/greencafe 
   
-* Open greencafe folder
-
-
-* Download zip or clone this repo
-  > git clone https://github.com/jo0707/greencafe
-  
+## License
+The software is provided under the MIT License
 
 ## Screenshots
 ![Login](screenshots/login.png)
+
+<p>For more screenshots, see <a href="screenshots/" target="_blank">screenshots</a></p>
