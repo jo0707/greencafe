@@ -9,7 +9,7 @@
 <h1></h1>
 
 <h2>Description</h2>
-<p>GreenCafe is a desktop-based cafe cashier application. Manage transactions, reports, menus and users with this app.</p>
+<p>GreenCafe is a desktop-based cafe cashier application. Manage transactions, reports, menus and users with this app. This application is made to fulfill the Vocational High School Exam project</p>
 
 <h2> Built With </h2>
 
