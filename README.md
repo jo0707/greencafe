@@ -8,14 +8,14 @@
 
 <h1></h1>
 
-<h3>Description</h3>
+<h2>Description</h2>
 <p>GreenCafe is a desktop-based cafe cashier application. Manage transactions, reports, menus and users with this app.</p>
 
-<h3> Requirements </h3>
+<h2> Requirements </h2>
 
 * Java 11 or newer
 
-<h3> Getting Started </h3>
+<h2> Getting Started </h2>
 
 * Download zip or clone this repo
   > git clone https://github.com/jo0707/greencafe 
