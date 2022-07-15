@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyComboBox?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="445.0"
+      styleClass="rootPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jo.greencafe.controller.pegawai.TambahPegawaiController">
+   <stylesheets>
+      <URL value="@css/base.css"/>
+      <URL value="@css/core/Buttons.css"/>
+      <URL value="@css/core/ComboBoxes.css"/>
+      <URL value="@css/core/TextFields.css"/>
+   </stylesheets>
+   <Label fx:id="titleLb" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="title5" text="Tambah Pegawai"
+          textAlignment="CENTER">
+      <VBox.margin>
+         <Insets bottom="48.0" left="8.0" right="8.0" top="8.0"/>
+      </VBox.margin>
+   </Label>
+   <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </VBox.margin>
+      <Label prefWidth="85.0" text="Nama Pegawai :"/>
+      <MFXTextField fx:id="namaTf" floatMode="DISABLED" maxWidth="1.7976931348623157E308" styleClass="text-field"
+                    textLimit="100" HBox.hgrow="ALWAYS">
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </MFXTextField>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </VBox.margin>
+      <Label prefWidth="85.0" text="Telepon :"/>
+      <MFXTextField fx:id="teleponTf" floatMode="DISABLED" maxWidth="1.7976931348623157E308" styleClass="text-field"
+                    textLimit="30" HBox.hgrow="ALWAYS">
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </MFXTextField>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </VBox.margin>
+      <Label prefWidth="85.0" text="Alamat :"/>
+      <MFXTextField fx:id="alamatTf" floatMode="DISABLED" maxWidth="1.7976931348623157E308" styleClass="text-field"
+                    HBox.hgrow="ALWAYS">
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </MFXTextField>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </VBox.margin>
+      <Label prefWidth="85.0" text="Jenis Kelamin :"/>
+      <MFXLegacyComboBox fx:id="jenkelCb" maxWidth="1.7976931348623157E308" styleClass="mfx-combo-box"
+                         HBox.hgrow="ALWAYS">
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </MFXLegacyComboBox>
+   </HBox>
+   <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </VBox.margin>
+      <Label prefWidth="85.0" text="Jabatan :"/>
+      <MFXLegacyComboBox fx:id="jabatanCb" maxWidth="1.7976931348623157E308" styleClass="mfx-combo-box"
+                         HBox.hgrow="ALWAYS">
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </MFXLegacyComboBox>
+   </HBox>
+   <MFXButton id="primary" fx:id="doneBtn" buttonType="RAISED" depthLevel="LEVEL1" maxWidth="1.7976931348623157E308"
+              onAction="#onDoneBtnClicked" styleClass="mfx-button" text="SELESAI" VBox.vgrow="ALWAYS">
+      <VBox.margin>
+         <Insets bottom="4.0" left="16.0" right="16.0" top="48.0"/>
+      </VBox.margin>
+      <padding>
+         <Insets bottom="12.0" left="12.0" right="12.0" top="12.0"/>
+      </padding>
+   </MFXButton>
+   <Label fx:id="errorLb" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308"
+          styleClass="errorLabel">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0"/>
+      </VBox.margin>
+   </Label>
+</VBox>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyComboBox?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<!--fx:controller="com.jo.greencafe.controller.log.LogAktivitasController"-->
+
+<VBox maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0"
+      styleClass="rootPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jo.greencafe.controller.transaksi.RiwayatTransaksiController">
+    <stylesheets>
+        <URL value="@css/base.css"/>
+        <URL value="@css/core/ComboBoxes.css"/>
+        <URL value="@css/core/DatePicker.css"/>
+        <URL value="@css/core/TableView.css"/>
+        <URL value="@css/core/Buttons.css"/>
+    </stylesheets>
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+    </padding>
+    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="title3" text="Laporan Transaksi">
+        <VBox.margin>
+          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+        </VBox.margin>
+        <padding>
+          <Insets bottom="64.0"/>
+        </padding>
+    </Label>
+    <HBox alignment="CENTER_LEFT">
+        <VBox.margin>
+            <Insets bottom="8.0"/>
+        </VBox.margin>
+        <MFXButton id="primary" fx:id="refreshBtn" buttonType="RAISED" depthLevel="LEVEL1" onAction="#onRefresh"
+                   styleClass="mfx-button" text="Refresh">
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+        </MFXButton>
+        <MFXButton id="primary" buttonType="RAISED" depthLevel="LEVEL1" onAction="#onExportClicked"
+                   styleClass="mfx-button" text="Export ke Excel">
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+            <HBox.margin>
+                <Insets left="8.0"/>
+            </HBox.margin>
+        </MFXButton>
+    </HBox>
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="53.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="137.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="61.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="138.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="206.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="60.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="148.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <VBox.margin>
+            <Insets bottom="24.0" top="8.0"/>
+        </VBox.margin>
+        <Label maxWidth="1.7976931348623157E308" text="Tanggal :" GridPane.halignment="CENTER"/>
+        <DatePicker fx:id="datePicker1" onAction="#datePicker1OnSelect" prefWidth="160.0" GridPane.columnIndex="1"
+                    GridPane.halignment="CENTER"/>
+        <Label text="Sampai" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
+        <DatePicker fx:id="datePicker2" onAction="#datePicker2OnSelect" prefWidth="160.0" GridPane.columnIndex="3"
+                    GridPane.halignment="CENTER"/>
+        <Label alignment="CENTER_RIGHT" text="Pegawai :" GridPane.columnIndex="6" GridPane.halignment="RIGHT">
+            <GridPane.margin>
+                <Insets right="8.0"/>
+            </GridPane.margin>
+        </Label>
+        <MFXLegacyComboBox fx:id="pegawaiCb" invalidLineColor="#20e74b" lineColor="#20e74b"
+                           onAction="#pegawaiCbOnSelect" styleClass="mfx-combo-box"
+                           stylesheets="@css/core/ComboBoxes.css" unfocusedLineColor="#20e74b"
+                           GridPane.columnIndex="7" GridPane.halignment="CENTER"/>
+        <Label fx:id="pendapatanLb" text="Pendapatan : Rp." GridPane.columnSpan="4" GridPane.halignment="LEFT"
+               GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets top="4.0"/>
+            </GridPane.margin>
+        </Label>
+        <MFXButton id="primary" fx:id="cetakStrukBtn" buttonType="RAISED" depthLevel="LEVEL1"
+                   maxWidth="1.7976931348623157E308" onAction="#onCetakStrukClicked" styleClass="mfx-button"
+                   text="Cetak Struk" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.halignment="CENTER"
+                   GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets top="4.0"/>
+            </GridPane.margin>
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+        </MFXButton>
+    </GridPane>
+    <GridPane maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="55.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <MFXLegacyTableView fx:id="transaksiTable" maxHeight="1.7976931348623157E308"
+                            maxWidth="1.7976931348623157E308" minHeight="402.0" onMouseClicked="#onTableClicked"
+                            styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="namaPegawaiColumn" maxWidth="1.7976931348623157E308" prefWidth="145.0"
+                             style="-fx-alignment: CENTER;" text="Nama Pegawai"/>
+                <TableColumn fx:id="noTransaksiColumn" maxWidth="1.7976931348623157E308" prefWidth="81.0"
+                             style="-fx-alignment: CENTER;" text="No.transaksi"/>
+                <TableColumn fx:id="totalColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="64.0"
+                             style="-fx-alignment: CENTER;" text="Total"/>
+                <TableColumn fx:id="tunaiColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="68.0"
+                             style="-fx-alignment: CENTER;" text="Tunai"/>
+                <TableColumn fx:id="tanggalColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="136.0"
+                             style="-fx-alignment: CENTER;" text="Tanggal"/>
+            </columns>
+            <GridPane.margin>
+                <Insets right="16.0"/>
+            </GridPane.margin>
+        </MFXLegacyTableView>
+        <MFXLegacyTableView id="bordered" fx:id="menuTable" maxHeight="1.7976931348623157E308"
+                            maxWidth="1.7976931348623157E308" minHeight="402.0" GridPane.columnIndex="1">
+            <columns>
+                <TableColumn fx:id="namaMenuColumn" maxWidth="500.0" prefWidth="179.0" style="-fx-alignment: CENTER;"
+                             text="Nama Menu"/>
+                <TableColumn fx:id="jumlahColumn" maxWidth="1.7976931348623157E308" prefWidth="57.0"
+                             style="-fx-alignment: CENTER;" text="Jumlah"/>
+                <TableColumn fx:id="hargaColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0"
+                             style="-fx-alignment: CENTER;" text="Harga/porsi"/>
+                <TableColumn fx:id="subtotalColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="86.0"
+                             style="-fx-alignment: CENTER;" text="Subtotal"/>
+            </columns>
+            <GridPane.margin>
+                <Insets left="16.0"/>
+            </GridPane.margin>
+        </MFXLegacyTableView>
+    </GridPane>
+</VBox>

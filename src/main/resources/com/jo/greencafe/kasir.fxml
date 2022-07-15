@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="725.0" prefWidth="1220.0" styleClass="rootPane" xmlns="http://javafx.com/javafx/18"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jo.greencafe.controller.kasir.KasirController">
+   <stylesheets>
+      <URL value="@css/base.css"/>
+      <URL value="@css/core/Buttons.css"/>
+      <URL value="@css/core/TextFields.css"/>
+   </stylesheets>
+   <VBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+         prefWidth="244.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+         AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+            <HBox.margin>
+               <Insets bottom="12.0" right="12.0"/>
+            </HBox.margin>
+            <Image url="@img/logo.png"/>
+         </ImageView>
+         <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #fff;"
+                styleClass="title4" text="GreenCafe" textAlignment="CENTER"/>
+      </HBox>
+      <MFXScrollPane fx:id="scrollPane" fitToWidth="true" style="-fx-background-color: #00000000;"
+                     styleClass="mfx-scroll-pane" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets/>
+         </VBox.margin>
+         <VBox fx:id="navBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0"
+               styleClass="navbar">
+            <padding>
+               <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+            </padding>
+         </VBox>
+      </MFXScrollPane>
+      <Separator prefWidth="200.0">
+         <VBox.margin>
+            <Insets left="12.0" right="12.0"/>
+         </VBox.margin>
+      </Separator>
+      <MFXButton id="primary" fx:id="logoutBtn" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL1"
+                 maxWidth="1.7976931348623157E308" onAction="#onLogoutBtnClicked" prefHeight="36.0" text="Logout"
+                 textAlignment="CENTER">
+         <VBox.margin>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+         </VBox.margin>
+      </MFXButton>
+   </VBox>
+   <MFXScrollPane fitToWidth="true" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0"
+                  AnchorPane.leftAnchor="244.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <StackPane fx:id="contentPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+   </MFXScrollPane>
+</AnchorPane>

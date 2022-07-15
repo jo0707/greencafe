@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" minHeight="600.0" minWidth="-Infinity" prefWidth="960.0" styleClass="rootPane"
+      xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jo.greencafe.controller.meja.KelolaMejaController">
+   <stylesheets>
+      <URL value="@css/base.css"/>
+      <URL value="@css/core/ComboBoxes.css"/>
+      <URL value="@css/core/DatePicker.css"/>
+      <URL value="@css/core/TableView.css"/>
+      <URL value="@css/core/Buttons.css"/>
+   </stylesheets>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+   </padding>
+   <Label fx:id="titleLb" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="title3" text="Kelola Meja">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </VBox.margin>
+      <padding>
+         <Insets bottom="48.0"/>
+      </padding>
+   </Label>
+   <HBox alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
+      <MFXLegacyTableView fx:id="noMejaTable" maxHeight="1.7976931348623157E308" onMouseClicked="#onTableClicked"
+                          prefHeight="440.0" prefWidth="279.0" styleClass="table-view">
+         <columns>
+            <TableColumn fx:id="noMejaColumn" maxWidth="500.0" prefWidth="107.0" style="-fx-alignment: CENTER;"
+                         text="Nomor Meja"/>
+            <TableColumn fx:id="statusColumn" maxWidth="1.7976931348623157E308" prefWidth="172.0"
+                         style="-fx-alignment: CENTER;" text="Status"/>
+         </columns>
+      </MFXLegacyTableView>
+      <VBox alignment="CENTER">
+         <HBox.margin>
+            <Insets left="48.0"/>
+         </HBox.margin>
+         <MFXButton id="primary" fx:id="tambahMejaBtn" buttonType="RAISED" depthLevel="LEVEL1"
+                    maxWidth="1.7976931348623157E308" onAction="#onTambahClicked" styleClass="mfx-button"
+                    text="+ Tambah Meja">
+            <padding>
+               <Insets bottom="16.0" left="24.0" right="24.0" top="16.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets bottom="8.0"/>
+            </VBox.margin>
+         </MFXButton>
+         <MFXButton id="negative" fx:id="hapusMejaBtns" buttonType="RAISED" depthLevel="LEVEL1"
+                    maxWidth="1.7976931348623157E308" onAction="#onHapusClicked" styleClass="mfx-button"
+                    text="Hapus Meja">
+            <padding>
+               <Insets bottom="16.0" left="24.0" right="24.0" top="16.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets bottom="8.0"/>
+            </VBox.margin>
+         </MFXButton>
+         <MFXButton id="primary" fx:id="ubahStatusBtn" buttonType="RAISED" depthLevel="LEVEL1"
+                    maxWidth="1.7976931348623157E308" onAction="#onUbahStatusClicked" styleClass="mfx-button"
+                    text="Ubah Status">
+            <padding>
+               <Insets bottom="16.0" left="24.0" right="24.0" top="16.0"/>
+            </padding>
+         </MFXButton>
+         <MFXButton id="primary" fx:id="pilihMejaBtn" buttonType="RAISED" depthLevel="LEVEL1"
+                    maxWidth="1.7976931348623157E308" onAction="#onPilihMejaBtn" styleClass="mfx-button"
+                    text="Pilih Meja">
+            <padding>
+               <Insets bottom="16.0" left="24.0" right="24.0" top="16.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets top="128.0"/>
+            </VBox.margin>
+         </MFXButton>
+      </VBox>
+   </HBox>
+</VBox>

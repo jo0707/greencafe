@@ -1,0 +1,73 @@
+@import '../../fonts/Fonts.css';
+@import 'Common.css';
+@import 'MFXColors.css';
+
+.mfx-button {
+	-fx-font-family: 'Visby Round CF Medium';
+	-fx-font-size: 13;
+	-fx-text-fill: -mfx-text-he;
+	-mfx-ripple-color: #3fffff;
+}
+
+.mfx-button .mfx-ripple-generator {
+	-mfx-ripple-radius: 40;
+	-mfx-auto-clip: true;
+}
+
+.mfx-button .text {
+	-fx-font-smoothing-type: lcd;
+}
+
+#primary, #positive {
+	-fx-background-color: -mfx-green;
+	-fx-text-fill: white;
+}
+
+#warning {
+	-fx-background-color: -mfx-orange;
+	-fx-text-fill: white;
+}
+
+#negative {
+	-fx-background-color: -mfx-red;
+	-fx-text-fill: white;
+}
+
+#disabled {
+	-fx-background-color: #888888;
+	-fx-text-fill: -mfx-text-disabled;
+}
+
+
+.outline-button {
+	-fx-background-color: transparent;
+	-fx-border-color: -mfx-green;
+	-fx-border-radius: 3;
+
+	-fx-text-fill: -mfx-green;
+}
+
+.outline-button:hover,
+.outline-button:focused {
+	-fx-background-color: -mfx-green;
+	-fx-text-fill: white;
+}
+
+
+.link-button {
+	-fx-background-color: transparent;
+	-fx-border-radius: 3;
+	-fx-text-fill: #0096FF;
+	-fx-underline: true;
+	-fx-cursor: hand;
+}
+
+.link-button:armed,
+.link-button:focused {
+	-fx-border-color: #006BFF;
+	-fx-text-fill: #006BFF;
+}
+
+.link-button .mfx-ripple-generator {
+	-mfx-ripple-color: #D9E9FF;
+}

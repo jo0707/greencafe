@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<!--fx:controller="com.jo.greencafe.controller.log.LogAktivitasController"-->
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+          prefWidth="960.0" styleClass="rootPane" xmlns="http://javafx.com/javafx/18"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.jo.greencafe.controller.transaksi.BuatTransaksiController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES"/>
+   </rowConstraints>
+   <stylesheets>
+      <URL value="@css/base.css"/>
+      <URL value="@css/kasir.css"/>
+      <URL value="@css/core/TextFields.css"/>
+      <URL value="@css/core/Buttons.css"/>
+      <URL value="@css/core/TableView.css"/>
+   </stylesheets>
+   <VBox maxHeight="-Infinity" styleClass="white-bordered-background">
+      <GridPane.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </GridPane.margin>
+      <padding>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </padding>
+      <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="70.0" prefWidth="70.0"
+                text="Nama Kasir :">
+            <HBox.margin>
+               <Insets right="8.0"/>
+            </HBox.margin>
+         </Label>
+         <Label fx:id="namaKasirLb" text="Andi"/>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+         <VBox.margin>
+            <Insets top="8.0"/>
+         </VBox.margin>
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="70.0" prefWidth="70.0" text="Tanggal :">
+            <HBox.margin>
+               <Insets right="8.0"/>
+            </HBox.margin>
+         </Label>
+         <Label fx:id="tanggalLb" text="1970-01-31 00:00:00"/>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+         <VBox.margin>
+            <Insets top="8.0"/>
+         </VBox.margin>
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="70.0" prefWidth="70.0"
+                text="No. Meja :">
+            <HBox.margin>
+               <Insets right="8.0"/>
+            </HBox.margin>
+         </Label>
+         <MFXButton id="primary" fx:id="pilihMejaBtn" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL1"
+                    maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                    onAction="#onPilihMejaBtnClicked" styleClass="mfx-button" text="Pilih Meja"
+                    textAlignment="CENTER"/>
+      </HBox>
+   </VBox>
+   <VBox prefHeight="200.0" prefWidth="100.0" styleClass="white-bordered-background" GridPane.columnIndex="1"
+         GridPane.columnSpan="2147483647">
+      <GridPane.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </GridPane.margin>
+      <padding>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </padding>
+      <HBox alignment="CENTER" maxWidth="1.7976931348623157E308">
+         <VBox.margin>
+            <Insets bottom="16.0"/>
+         </VBox.margin>
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308"
+                styleClass="title6" text="No Transaksi :">
+            <HBox.margin>
+               <Insets right="8.0"/>
+            </HBox.margin>
+         </Label>
+         <Label fx:id="noTransaksiLb" maxWidth="1.7976931348623157E308" styleClass="title6" text="BISA-1"/>
+      </HBox>
+      <MFXLegacyTableView id="bordered" fx:id="menuTable" maxHeight="1.7976931348623157E308" minHeight="402.0"
+                          onMouseClicked="#onTableClicked" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="namaMenuColumn" maxWidth="500.0" prefWidth="245.0" style="-fx-alignment: CENTER;"
+                         text="Nama Menu"/>
+            <TableColumn fx:id="jumlahColumn" maxWidth="1.7976931348623157E308" prefWidth="81.0"
+                         style="-fx-alignment: CENTER;" text="jumlah"/>
+            <TableColumn fx:id="hargaColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="119.0"
+                         style="-fx-alignment: CENTER;" text="harga/porsi"/>
+            <TableColumn fx:id="subtotalColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="134.0"
+                         style="-fx-alignment: CENTER;" text="Subtotal"/>
+         </columns>
+      </MFXLegacyTableView>
+      <HBox>
+         <VBox.margin>
+            <Insets top="16.0"/>
+         </VBox.margin>
+         <MFXButton id="primary" fx:id="tambahMenuBtn" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL1"
+                    maxWidth="1.7976931348623157E308" onAction="#onTambahMenuClicked" styleClass="mfx-button"
+                    text="+ TAMBAH MENU" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+            <padding>
+               <Insets bottom="8.0" left="16.0" right="16.0" top="8.0"/>
+            </padding>
+            <HBox.margin>
+               <Insets right="16.0"/>
+            </HBox.margin>
+         </MFXButton>
+         <MFXButton id="negative" fx:id="hapusMenuBtn" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL1"
+                    maxWidth="1.7976931348623157E308" onAction="#onHapusMenuBtn" styleClass="mfx-button"
+                    text="🗑 HAPUS MENU" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+            <padding>
+               <Insets bottom="8.0" left="16.0" right="16.0" top="8.0"/>
+            </padding>
+         </MFXButton>
+      </HBox>
+      <Separator prefWidth="200.0">
+         <VBox.margin>
+            <Insets bottom="16.0" top="16.0"/>
+         </VBox.margin>
+      </Separator>
+      <HBox alignment="CENTER_RIGHT">
+         <VBox.margin>
+            <Insets bottom="4.0"/>
+         </VBox.margin>
+         <Label text="Total : Rp.">
+            <HBox.margin>
+               <Insets right="16.0"/>
+            </HBox.margin>
+         </Label>
+         <MFXTextField fx:id="totalTf" allowEdit="false" disable="true" floatMode="DISABLED" prefWidth="148.0"
+                       styleClass="mfx-text-field" HBox.hgrow="ALWAYS"/>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <VBox.margin>
+            <Insets bottom="4.0"/>
+         </VBox.margin>
+         <Label text="Bayar : Rp.">
+            <HBox.margin>
+               <Insets right="16.0"/>
+            </HBox.margin>
+         </Label>
+         <MFXTextField fx:id="bayarTf" disable="true" floatMode="DISABLED" prefWidth="148.0"
+                       styleClass="mfx-text-field" textLimit="9"/>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <VBox.margin>
+            <Insets bottom="4.0"/>
+         </VBox.margin>
+         <Separator prefWidth="200.0"/>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <VBox.margin>
+            <Insets bottom="4.0"/>
+         </VBox.margin>
+         <Label text="Kembali : Rp.">
+            <HBox.margin>
+               <Insets right="16.0"/>
+            </HBox.margin>
+         </Label>
+         <MFXTextField fx:id="kembaliTf" allowEdit="false" disable="true" floatMode="DISABLED" prefWidth="148.0"
+                       styleClass="mfx-text-field"/>
+      </HBox>
+      <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+         <MFXButton id="primary" fx:id="bayarBtn" buttonType="RAISED" depthLevel="LEVEL1"
+                    maxHeight="1.7976931348623157E308" onAction="#onBayarBtnClicked" prefHeight="25.0"
+                    prefWidth="148.0" styleClass="mfx-button" text="BAYAR"/>
+      </HBox>
+   </VBox>
+</GridPane>

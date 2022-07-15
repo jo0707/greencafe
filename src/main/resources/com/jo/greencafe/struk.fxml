@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefWidth="442.0" styleClass="rootPane"
+      xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jo.greencafe.controller.struk.StrukController">
+   <stylesheets>
+      <URL value="@css/base.css"/>
+      <URL value="@css/core/ComboBoxes.css"/>
+      <URL value="@css/core/DatePicker.css"/>
+      <URL value="@css/core/Buttons.css"/>
+      <URL value="@css/core/TextFields.css"/>
+      <URL value="@css/core/TableViewWhite.css"/>
+   </stylesheets>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+   </padding>
+   <Label fx:id="titleLb" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Bisa Ngopi Café">
+      <VBox.margin>
+         <Insets/>
+      </VBox.margin>
+      <font>
+         <Font name="Consolas Bold" size="36.0"/>
+      </font>
+   </Label>
+   <Label fx:id="titleLb1" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Jl. Bersama Kita No.23a">
+      <font>
+         <Font name="Consolas" size="17.0"/>
+      </font>
+   </Label>
+   <Label fx:id="noTransaksiLb" alignment="CENTER" maxWidth="1.7976931348623157E308" text="BISA-000">
+      <font>
+         <Font name="Consolas" size="17.0"/>
+      </font>
+      <VBox.margin>
+         <Insets top="36.0"/>
+      </VBox.margin>
+   </Label>
+   <MFXLegacyTableView id="bordered" fx:id="menuTable" maxHeight="1.7976931348623157E308"
+                       maxWidth="1.7976931348623157E308" minHeight="365.0" prefHeight="365.0" prefWidth="410.0">
+      <columns>
+         <TableColumn fx:id="namaMenuColumn" maxWidth="500.0" prefWidth="138.0" style="-fx-alignment: CENTER;"
+                      text="Nama Menu"/>
+         <TableColumn fx:id="jumlahColumn" maxWidth="1.7976931348623157E308" prefWidth="81.0"
+                      style="-fx-alignment: CENTER;" text="Jumlah"/>
+         <TableColumn fx:id="hargaColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="84.0"
+                      style="-fx-alignment: CENTER;" text="Harga/porsi"/>
+         <TableColumn fx:id="subtotalColumn" maxWidth="1.7976931348623157E308" minWidth="0.0"
+                      prefWidth="94.199951171875" style="-fx-alignment: CENTER;" text="Subtotal"/>
+      </columns>
+      <VBox.margin>
+         <Insets top="4.0"/>
+      </VBox.margin>
+   </MFXLegacyTableView>
+   <GridPane>
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+      <VBox.margin>
+         <Insets top="8.0"/>
+      </VBox.margin>
+      <Label fx:id="tanggalLb" text="Tanggal : 2022-01-31 00:00:00">
+         <font>
+            <Font name="Consolas" size="12.0"/>
+         </font>
+      </Label>
+      <Label fx:id="noMejaLb" text="Nomor Meja : 1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Consolas" size="12.0"/>
+         </font>
+      </Label>
+      <Label fx:id="totalLb" text="Total : Rp.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+         <font>
+            <Font name="Consolas" size="12.0"/>
+         </font>
+      </Label>
+      <Label fx:id="tunaiLb" text="Tunai : Rp.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+             GridPane.rowIndex="1">
+         <font>
+            <Font name="Consolas" size="12.0"/>
+         </font>
+      </Label>
+      <Label fx:id="kembaliLb" text="Kembali : Rp.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+             GridPane.rowIndex="2">
+         <font>
+            <Font name="Consolas" size="12.0"/>
+         </font>
+      </Label>
+   </GridPane>
+   <Label fx:id="kasirLb" alignment="CENTER" maxWidth="1.7976931348623157E308" text="KASIR : -">
+      <font>
+         <Font name="Consolas Bold" size="12.0"/>
+      </font>
+      <VBox.margin>
+         <Insets top="16.0"/>
+      </VBox.margin>
+   </Label>
+</VBox>

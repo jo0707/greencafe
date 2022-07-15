@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.legacy.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--fx:controller="com.jo.greencafe.controller.log.LogAktivitasController"-->
+
+<VBox maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="960.0"
+      styleClass="rootPane" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jo.greencafe.controller.log.LogAktivitasController">
+   <stylesheets>
+      <URL value="@css/base.css"/>
+      <URL value="@css/core/ComboBoxes.css"/>
+      <URL value="@css/core/DatePicker.css"/>
+      <URL value="@css/core/TableView.css"/>
+   </stylesheets>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+   </padding>
+   <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="title3" text="Log Aktivitas">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </VBox.margin>
+      <padding>
+         <Insets bottom="64.0"/>
+      </padding>
+   </Label>
+   <HBox alignment="CENTER_LEFT">
+      <VBox.margin>
+         <Insets bottom="36.0"/>
+      </VBox.margin>
+      <Label maxWidth="1.7976931348623157E308" text="Tanggal :">
+         <HBox.margin>
+            <Insets/>
+         </HBox.margin>
+      </Label>
+      <DatePicker fx:id="datePicker1" onAction="#datePicker1OnSelect">
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </DatePicker>
+      <Label text="Sampai">
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </Label>
+      <DatePicker fx:id="datePicker2" onAction="#datePicker2OnSelect">
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </DatePicker>
+      <Label alignment="CENTER_RIGHT" text="Pegawai :">
+         <HBox.margin>
+            <Insets left="190.0"/>
+         </HBox.margin>
+      </Label>
+      <MFXLegacyComboBox fx:id="pegawaiCb" invalidLineColor="#20e74b" lineColor="#20e74b"
+                         onAction="#pegawaiCbOnSelect" prefHeight="21.0" prefWidth="166.0" styleClass="mfx-combo-box"
+                         stylesheets="@css/core/ComboBoxes.css" unfocusedLineColor="#20e74b">
+         <HBox.margin>
+            <Insets left="16.0"/>
+         </HBox.margin>
+      </MFXLegacyComboBox>
+   </HBox>
+   <MFXLegacyTableView fx:id="logTable" maxHeight="1.7976931348623157E308" styleClass="table-view" VBox.vgrow="ALWAYS">
+      <columns>
+         <TableColumn fx:id="namaColumn" maxWidth="1.7976931348623157E308" prefWidth="174.0"
+                      style="-fx-alignment: CENTER;" text="Nama Pegawai"/>
+         <TableColumn fx:id="jabatanColumn" maxWidth="1.7976931348623157E308" prefWidth="156.0"
+                      style="-fx-alignment: CENTER;" text="Jabatan"/>
+         <TableColumn fx:id="aktivitasColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="405.0"
+                      style="-fx-alignment: CENTER;" text="Aktivitas"/>
+         <TableColumn fx:id="tanggalColumn" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="193.0"
+                      style="-fx-alignment: CENTER;" text="Tanggal"/>
+      </columns>
+   </MFXLegacyTableView>
+</VBox>

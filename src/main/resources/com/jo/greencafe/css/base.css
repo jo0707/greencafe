@@ -1,0 +1,94 @@
+@import '../fonts/Fonts.css';
+@import 'core/MFXColors.css';
+
+.rootPane {
+    	-fx-background-color: white;
+}
+
+.rootPane .side-background {
+    -fx-background-color: -mfx-green;
+    -fx-background-radius: 0 20 20 0;
+}
+
+
+.title1 {
+    -fx-font-family: 'Visby Round CF Heavy';
+    -fx-font-size: 56;
+}
+
+.title2 {
+    -fx-font-family: 'Visby Round CF Heavy';
+    -fx-font-size: 48;
+}
+
+.title3 {
+    -fx-font-family: 'Visby Round CF Heavy';
+    -fx-font-size: 36;
+}
+
+.title4 {
+    -fx-font-family: 'Visby Round CF Heavy';
+    -fx-font-size: 24;
+}
+
+.title5 {
+    -fx-font-family: 'Visby Round CF Heavy';
+    -fx-font-size: 20;
+}
+
+.title6 {
+    -fx-font-family: 'Visby Round CF Heavy';
+    -fx-font-size: 17;
+}
+
+.errorLabel {
+    -fx-text-fill : -mfx-red;
+    -fx-font-family: 'Open Sans Regular';
+    -fx-font-size: 11;
+}
+
+/**************************************************
+ * Sidebar
+**************************************************/
+.rootPane .sidebar {
+	-fx-background-color: -mfx-green;
+	-fx-background-radius: 0 20 20 0;
+}
+
+.rootPane .sidebar .mfx-scroll-pane {
+	-fx-background-color: transparent;
+	-track-color: rgba(255, 255, 255, 0.3);
+	-thumb-color: white;
+	-thumb-hover-color: white;
+}
+
+.rootPane .sidebar .navbar .mfx-rectangle-toggle-node {
+	-fx-background-color: transparent;
+	-fx-background-radius: 0;
+	-fx-border-color: transparent;
+	-fx-border-radius: 0;
+	-fx-pref-height: 40;
+
+	-fx-font-family: 'Visby Round CF Demi Bold';
+	-fx-font-size: 13;
+	-fx-text-fill: white;
+}
+
+.rootPane .sidebar .navbar .mfx-rectangle-toggle-node .mfx-icon-wrapper .mfx-font-icon {
+	-mfx-color: white;
+}
+
+.rootPane .sidebar .navbar .mfx-rectangle-toggle-node:selected {
+	-fx-background-color: white;
+	-fx-background-radius: 5;
+	-fx-text-fill: -mfx-green;
+}
+
+.rootPane .sidebar .navbar .mfx-rectangle-toggle-node:selected .selection-rectangle {
+	-fx-stroke: transparent;
+	-fx-fill: -mfx-green;
+}
+
+.rootPane .sidebar .navbar .mfx-rectangle-toggle-node:selected .mfx-icon-wrapper .mfx-font-icon {
+	-mfx-color: -mfx-green;
+}

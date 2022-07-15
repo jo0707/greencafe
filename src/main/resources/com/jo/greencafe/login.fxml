@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="495.0" prefWidth="957.0" styleClass="rootPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jo.greencafe.controller.LoginController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+   <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="442.0" prefWidth="699.0" styleClass="side-background" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2147483647" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+   <ImageView fx:id="logoIv" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" smooth="false"
+              GridPane.halignment="CENTER" GridPane.rowSpan="2147483647" GridPane.valignment="CENTER">
+      <Image url="@img/logo.png"/>
+   </ImageView>
+   <Label styleClass="title4" text="GreenCafé" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+      <GridPane.margin>
+         <Insets bottom="4.0" />
+      </GridPane.margin>
+   </Label>
+   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+         GridPane.hgrow="ALWAYS" GridPane.rowSpan="2147483647">
+      <Label alignment="CENTER" styleClass="title2" text="LOGIN">
+         <font>
+            <Font size="44.0"/>
+         </font>
+         <VBox.margin>
+            <Insets bottom="78.0"/>
+         </VBox.margin>
+      </Label>
+      <MFXTextField fx:id="usernameTf" borderGap="4.0" floatMode="BORDER" floatingText="Username" prefWidth="223.0"
+                    textLimit="32">
+         <VBox.margin>
+            <Insets bottom="24.0"/>
+         </VBox.margin>
+         <opaqueInsets>
+            <Insets/>
+         </opaqueInsets>
+      </MFXTextField>
+      <MFXPasswordField fx:id="passwordTf" floatMode="BORDER" floatingText="Password" prefWidth="223.0" textLimit="32">
+         <VBox.margin>
+            <Insets bottom="78.0"/>
+         </VBox.margin>
+      </MFXPasswordField>
+      <MFXButton id="primary" fx:id="loginBtn" buttonType="RAISED" depthLevel="LEVEL1"
+                 onAction="#loginBtnActionPerformed" prefHeight="64.0" prefWidth="223.0" rippleColor="#3cff91"
+                 styleClass="mfx-button" text="LOGIN">
+         <font>
+            <Font size="13.0"/>
+         </font>
+      </MFXButton>
+      <Label fx:id="errorLb" styleClass="errorLabel">
+         <VBox.margin>
+            <Insets top="4.0"/>
+         </VBox.margin>
+         <font>
+            <Font size="11.0"/>
+         </font>
+      </Label>
+   </VBox>
+   <Label alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" text="© 2022 Joshua Sinaga" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+      <font>
+         <Font name="System Italic" size="12.0" />
+      </font>
+      <GridPane.margin>
+         <Insets bottom="4.0" />
+      </GridPane.margin>
+   </Label>
+   <stylesheets>
+      <URL value="@css/login.css" />
+      <URL value="@css/core/Buttons.css" />
+      <URL value="@css/core/TextFields.css" />
+   </stylesheets>
+</GridPane>

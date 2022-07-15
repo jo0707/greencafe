@@ -1,0 +1,24 @@
+* {
+	-mfx-blue: #2196f3;
+	-mfx-charcoal: #445055;
+	-mfx-green: #2ECC71;
+	-mfx-green-light: #3EdC81;
+	-mfx-green-50: #2ECC7188;
+	-mfx-green-25: #2ECC7144;
+	-mfx-green-10: #bcedc6;
+	-mfx-green-dark: #18b55a;
+	-mfx-onyx: #353935;
+	-mfx-orange: #ff9800;
+	-mfx-purple: #7a0ed9;
+	-mfx-red: #EF6E6B;
+	-mfx-yellow: #FFEA00;
+
+    -mfx-light-grey: #e9e9e9;
+
+	-mfx-text-he: rgba(0, 0, 0, 0.87); /* High Emphasis */
+	-mfx-text-me: rgba(0, 0, 0, 0.60); /* Medium Emphasis*/
+	-mfx-text-disabled: rgba(0, 0, 0, 0.38); /* Disabled */
+
+	-common-gradient: linear-gradient(to right bottom, #c4008b, #d00085, #dc007f, #e60b79, #ef1872, #f5276b, #fa3564, #fe415e, #ff5158, #ff5f52, #ff6c4e, #ff794b);
+	-secondary-gradient: linear-gradient(to right bottom, #1ec400, #00bd3a, #00b654, #00ae67, #00a574, #00a280, #009e8a, #009a91, #009b9d, #009ba8, #009bb2, #009abb);
+}

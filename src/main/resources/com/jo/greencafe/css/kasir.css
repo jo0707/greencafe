@@ -1,0 +1,19 @@
+@import 'base.css';
+
+.report-background {
+    -fx-background-color: -mfx-green-10;
+    -fx-border-color: -mfx-green-25;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+	-fx-background-radius: 20;
+	-fx-effect: dropshadow(two-pass-box, #99b29b, 10, 0.2, 0.0, 1.5)
+}
+
+.white-bordered-background {
+    -fx-background-color: -mfx-white;
+    -fx-border-color: -mfx-green-50;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+	-fx-background-radius: 20;
+	/*-fx-effect: dropshadow(two-pass-box, #99b29b, 10, 0.2, 0.0, 1.5);*/
+}

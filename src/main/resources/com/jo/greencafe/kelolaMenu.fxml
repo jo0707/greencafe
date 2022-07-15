@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" minHeight="600.0" minWidth="-Infinity" prefWidth="960.0" styleClass="rootPane"
+      xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jo.greencafe.controller.menu.KelolaMenuContoller">
+    <stylesheets>
+        <URL value="@css/base.css"/>
+        <URL value="@css/core/ComboBoxes.css"/>
+        <URL value="@css/core/DatePicker.css"/>
+        <URL value="@css/core/TableView.css"/>
+        <URL value="@css/core/Buttons.css"/>
+    </stylesheets>
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+    </padding>
+    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="title3" text="Kelola Menu">
+        <VBox.margin>
+          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+        </VBox.margin>
+        <padding>
+          <Insets bottom="64.0"/>
+        </padding>
+    </Label>
+    <GridPane alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <VBox.margin>
+            <Insets bottom="12.0"/>
+        </VBox.margin>
+        <MFXButton id="primary" fx:id="tambahBtn" buttonType="RAISED" depthLevel="LEVEL1" onAction="#onTambahClicked"
+                   rippleColor="#e4e4e4" styleClass="mfx-button" text="+ TAMBAH" GridPane.columnIndex="10"
+                   GridPane.halignment="RIGHT">
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+        </MFXButton>
+        <MFXButton id="warning" fx:id="editBtn" buttonType="RAISED" depthLevel="LEVEL1"
+                   maxWidth="1.7976931348623157E308" onAction="#onEditClicked" rippleColor="#e4e4e4"
+                   styleClass="mfx-button" text="EDIT">
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets left="4.0" right="4.0"/>
+            </GridPane.margin>
+        </MFXButton>
+        <MFXButton id="negative" fx:id="hapusBtn" buttonType="RAISED" depthLevel="LEVEL1"
+                   maxWidth="1.7976931348623157E308" onAction="#onHapusClicked" rippleColor="#e4e4e4"
+                   styleClass="mfx-button" text="HAPUS" GridPane.columnIndex="1">
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets left="4.0" right="4.0"/>
+            </GridPane.margin>
+        </MFXButton>
+    </GridPane>
+    <MFXLegacyTableView fx:id="menuTable" maxHeight="1.7976931348623157E308" onMouseClicked="#onTableClicked"
+                        styleClass="table-view" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="namaMenuColumn" maxWidth="500.0" prefWidth="313.0" style="-fx-alignment: CENTER;"
+                       text="Nama Menu"/>
+          <TableColumn fx:id="hargaMenuColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="313.0"
+                       style="-fx-alignment: CENTER;" text="Harga Menu"/>
+          <TableColumn fx:id="jenisMenuColumn" maxWidth="1.7976931348623157E308" prefWidth="302.0"
+                       style="-fx-alignment: CENTER;" text="Jenis Menu"/>
+        </columns>
+    </MFXLegacyTableView>
+</VBox>

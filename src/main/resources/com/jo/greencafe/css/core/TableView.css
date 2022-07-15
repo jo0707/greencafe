@@ -1,0 +1,27 @@
+@import '../../fonts/Fonts.css';
+@import 'MFXColors.css';
+
+.table-view {
+    -fx-background-radius: 8;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(two-pass-box, #99b29b, 10, 0.2, 0.0, 1.5)
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -mfx-green;
+    -fx-background-radius: 8 8 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-family: 'Visby Round CF Demi Bold';
+    font-weight: bold;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 40;
+    -fx-border-width: 1;
+    -fx-background-insets: 0 -3 0 0;
+    -fx-background-color: -mfx-green;
+    -fx-border-color: -mfx-green-light;
+}

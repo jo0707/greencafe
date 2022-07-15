@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<!--fx:controller="com.jo.greencafe.controller.log.LogAktivitasController"-->
+
+<VBox maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="960.0"
+      styleClass="rootPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jo.greencafe.controller.admin.AdminDashboardController">
+   <stylesheets>
+      <URL value="@css/base.css"/>
+      <URL value="@css/core/ComboBoxes.css"/>
+      <URL value="@css/core/DatePicker.css"/>
+      <URL value="@css/core/TableView.css"/>
+   </stylesheets>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+   </padding>
+   <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="title3" text="Selamat Datang!">
+      <VBox.margin>
+         <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+      </VBox.margin>
+   </Label>
+   <Label fx:id="meetlb" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="title4"
+          text="Halo Andi, Anda login sebagai Admin">
+      <padding>
+         <Insets bottom="128.0"/>
+      </padding>
+   </Label>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <ColorAdjust brightness="0.68" contrast="-1.0" hue="0.71" saturation="0.14"/>
+         </effect>
+         <Image url="@img/logo.png"/>
+      </ImageView>
+   </HBox>
+   <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="title6" text="Ngopi dulu Sob!"
+          textFill="#0d4d2057">
+      <VBox.margin>
+         <Insets bottom="128.0" top="16.0"/>
+      </VBox.margin>
+   </Label>
+   <Label fx:id="dateLb" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" text="Kamis, 1 Januari 1970 - 00:00:00" textAlignment="CENTER"
+          VBox.vgrow="ALWAYS"/>
+</VBox>
